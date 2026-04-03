@@ -1,0 +1,25 @@
+* {
+    font-family: "Playwrite NZ Basic", cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+
+header, main {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin: 1rem;
+}
+
+.search-bar {
+    width: 500px;
+}
+
+footer {
+    margin-left: 1rem;
+}
