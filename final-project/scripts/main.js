@@ -20,9 +20,7 @@ document.querySelector("#search-btn").addEventListener("click", async() => {
 
         if (data && data.length > 0) {
             data.forEach(movie => {
-                const p = document.createElement("p");
-                p.textContent = `${movie.primaryTitle}`;
-                result.appendChild(p);
+                result.innerHTML += `<p>${movie.primaryTitle}</p>`;
             });
         } else {
             result.textContent = "No results found";
