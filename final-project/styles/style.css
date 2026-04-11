@@ -7,7 +7,7 @@
     background-color: black;
 }
 
-header, main {
+header{
     display: flex;
     justify-content: center;
 }
@@ -16,8 +16,32 @@ main {
     margin: 1rem;
 }
 
+.search-div {
+    display: flex;
+    justify-content: center;
+}
+
 .search-bar {
-    width: 500px;
+    width: 50rem;
+}
+
+.search-result {
+    display: grid;
+	grid-gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    text-align: center;
+}
+
+.result-card {
+    flex: 1 1 45%;
+    margin: 0.25em;
+    padding: 0.5em;
+    border: 1px solid var(--light-grey);
+    max-width: 250px;
+}
+
+.result-card a {
+    text-decoration: none;
 }
 
 footer {

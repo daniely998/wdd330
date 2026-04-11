@@ -1,4 +1,10 @@
-document.querySelector("#search-btn").addEventListener("click", async() => {
+document.querySelector("#search-bar").addEventListener("keydown", async(event) => {
+    if (event.key === "Enter") {
+        await search();
+    }
+});
+
+async function search() {
     const query = document.querySelector("#search-bar").value.trim();
 
     const url = `https://imdb236.p.rapidapi.com/api/imdb/autocomplete?query=${encodeURIComponent(query)}`;
@@ -15,12 +21,23 @@ document.querySelector("#search-btn").addEventListener("click", async() => {
         const response = await fetch(url, options);
         const data = await response.json();
         console.log(data);
+
         const result = document.querySelector("#search-result");
         result.innerHTML = "";
-
+        
+        
         if (data && data.length > 0) {
             data.forEach(movie => {
-                result.innerHTML += `<p>${movie.primaryTitle}</p>`;
+                let card = document.createElement('section');
+                card.className = 'result-card';
+
+                card.innerHTML = `
+                <a href="${movie.url}" target="_blank">
+                    <h2>${movie.primaryTitle}</h2>
+                    <img src="${movie.primaryImage}" alt="${movie.primaryTitle}" width=300 height=450 loading=lazy>
+                </a>
+                `;
+            result.appendChild(card);
             });
         } else {
             result.textContent = "No results found";
@@ -28,4 +45,4 @@ document.querySelector("#search-btn").addEventListener("click", async() => {
     } catch (error) {
         console.error(error);
     }
-})
+};
