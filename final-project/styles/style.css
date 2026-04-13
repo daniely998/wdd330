@@ -15,8 +15,8 @@ header{
     justify-content: center;
 }
 
-main {
-    margin: 1rem;
+h1 {
+    margin: 0.5rem;
 }
 
 .search-div {
@@ -26,6 +26,16 @@ main {
 
 .search-bar {
     width: 50rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.prompt {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .search-result {
@@ -36,17 +46,42 @@ main {
 }
 
 .result-card {
-    /* flex: 1 1 45%;
+    flex: 1 1 45%;
     margin: 0.25em;
     padding: 0.5em;
-    border: 1px solid var(--light-grey);
-    max-width: 250px; */
+    border-radius: 10px;
+    h2 {
+        margin-bottom: 0.25em;
+    }
+    a img {
+        transition: transform 0.5s;
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
 }
 
-.result-card a {
+.movie-detail {
+    position: relative;
+    margin: auto;
+    max-width: 50rem;
+    border-radius: 10px;
+    border: 1px solid;
+    h3, p {
+        margin: 1em;
+    }
+}
+
+.close-detail {
     text-decoration: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
 }
 
-footer {
+/* footer {
     margin-left: 1rem;
-}
+} */
