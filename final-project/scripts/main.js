@@ -34,7 +34,7 @@ async function search() {
                 card.innerHTML = `
                 <a href="${movie.url}" target="_blank">
                     <h2>${movie.primaryTitle}</h2>
-                    <img src="${movie.primaryImage}" alt="${movie.primaryTitle}" width=300 height=450 loading=lazy>
+                    <img src="${movie.primaryImage}" alt="${movie.primaryTitle}" width=200 height=350 loading=lazy>
                 </a>
                 `;
             result.appendChild(card);

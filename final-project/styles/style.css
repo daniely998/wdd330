@@ -1,5 +1,8 @@
 * {
-    font-family: "Playwrite NZ Basic", cursive;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -33,11 +36,11 @@ main {
 }
 
 .result-card {
-    flex: 1 1 45%;
+    /* flex: 1 1 45%;
     margin: 0.25em;
     padding: 0.5em;
     border: 1px solid var(--light-grey);
-    max-width: 250px;
+    max-width: 250px; */
 }
 
 .result-card a {
