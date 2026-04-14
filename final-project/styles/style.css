@@ -12,21 +12,24 @@
 
 header{
     display: flex;
-    justify-content: center;
-}
-
-h1 {
-    margin: 0.5rem;
-}
-
-.search-div {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    ul{
+        display: flex;
+        list-style: none;
+        margin: 1.5rem 0 0 2rem;
+        li {
+            margin-right: 2rem;
+            a {
+                text-decoration: none;
+                font-size: larger;
+            }
+        }
+    } 
 }
 
 .search-bar {
-    width: 50rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    width: 35%;
     padding: 10px;
     font-size: large;
     border-radius: 10px;
@@ -38,7 +41,7 @@ h1 {
     text-align: center;
 }
 
-.search-result {
+.display {
     display: grid;
 	grid-gap: 0.5rem;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -72,13 +75,20 @@ h1 {
     }
 }
 
-.close-detail {
+.add, .remove, .close-detail {
     text-decoration: none;
     font-size: 2rem;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
+}
+
+.add, .remove {
+    right: 40px;
+}
+
+.close-detail {
     right: 10px;
 }
 
