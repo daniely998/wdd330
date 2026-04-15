@@ -33,7 +33,6 @@ async function search() {
     try {
         let data = await fetchUrl(tmdb+'/search/movie?'+tmdbKey+`&query=${query}`);
         let movies = data.results;
-        // console.log(movies); // for testing
         localStorage.setItem("movies", JSON.stringify(movies));
 
         displayMovies(movies);
@@ -83,7 +82,13 @@ display.addEventListener("click", (event) => {
         const card = event.target.closest(".movie-card");
 
         const movieId = card.dataset.id;
-        const movies = JSON.parse(localStorage.getItem("movies"));
+        let get;
+        if (window.location.pathname === "/list.html") {
+            get = localStorage.getItem("movieList");
+        } else {
+            get = localStorage.getItem("movies");
+        }
+        const movies = JSON.parse(get);
         let movie = movies.find(m => m.id == movieId);
 
         if (movie) {
