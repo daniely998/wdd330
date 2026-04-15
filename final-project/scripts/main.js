@@ -83,8 +83,7 @@ display.addEventListener("click", (event) => {
 
         const movieId = card.dataset.id;
         let get;
-        console.log(window.location.pathname);
-        if (window.location.pathname === "/list.html") {
+        if (document.body.id === "list-page") {
             get = localStorage.getItem("movieList");
         } else {
             get = localStorage.getItem("movies");
