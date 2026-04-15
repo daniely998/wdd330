@@ -82,13 +82,7 @@ display.addEventListener("click", (event) => {
         const card = event.target.closest(".movie-card");
 
         const movieId = card.dataset.id;
-        let get;
-        if (document.body.id === "list-page") {
-            get = localStorage.getItem("movieList");
-        } else {
-            get = localStorage.getItem("movies");
-        }
-        const movies = JSON.parse(get);
+        const movies = JSON.parse(localStorage.getItem("movies"));
         let movie = movies.find(m => m.id == movieId);
 
         if (movie) {

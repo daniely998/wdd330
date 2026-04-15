@@ -7,6 +7,7 @@ async function movieList() {
 
     const movies = JSON.parse(localStorage.getItem("movieList"));
     if (movies && movies.length > 0) {
+        localStorage.setItem("movies", JSON.stringify(movies));
         displayMovies(movies);
     } else {
         prompt.textContent = 'Your List Is Empty';
