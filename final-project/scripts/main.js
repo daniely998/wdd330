@@ -12,7 +12,7 @@ const message = document.querySelector("#message");
 export const tmdb = 'https://api.themoviedb.org/3';
 export const tmdbKey = 'api_key=a709703cef728f1933407c8170e42f0b';
 const tmdbImage = 'https://image.tmdb.org/t/p/w500';
-const omdb = 'http://www.omdbapi.com/?';
+const omdb = 'https://www.omdbapi.com/?';
 const omdbKey = 'apikey=16a8d8ce';
 
 // Search function

@@ -1,0 +1,3 @@
+trello: https://trello.com/b/vnNgNRrm/final-project
+github: https://github.com/daniely998/wdd330/tree/main/final-project
+site: https://daniely998.github.io/wdd330/final-project/index.html
